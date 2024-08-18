@@ -1,0 +1,4 @@
+-pip install django
+-django-admin startproject AI_App
+-python manage.py startapp myapp
+-python manage.py runserver

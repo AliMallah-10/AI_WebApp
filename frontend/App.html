@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link
+      src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    /> -->
+    <style>
+      .load {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
+      }
+
+      .bar {
+        display: inline-block;
+        width: 5px;
+        height: 35px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+        animation: scale-up4 1s linear infinite;
+      }
+
+      .bar:nth-child(2) {
+        height: 55px;
+        margin: 0 5px;
+        animation-delay: 0.25s;
+      }
+
+      .bar:nth-child(3) {
+        animation-delay: 0.5s;
+      }
+
+      @keyframes scale-up4 {
+        20% {
+          background-color: #ffff;
+          transform: scaleY(1.5);
+        }
+
+        40% {
+          transform: scaleY(1);
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="flex flex-col min-h-screen bg-slate-200 font-sans antialised box-border"
+  >
+    <!-- Navbar -->
+    <nav class="bg-red-600 p-4 text-white flex justify-between items-center">
+      <div>
+        <h1 class="text-4xl font-bold">AI Blog Generator</h1>
+      </div>
+      <div>
+        <a href="#" class="text-white hover:underline text-2xl">Logout</a>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="mt-10 flex flex-col items-center">
+      <div
+        class="bg-red-400 w-3/5 rounded-xl p-6 shadow-lg transition-transform transform hover:scale-105"
+      >
+        <!-- introduction -->
+        <div class="text-center">
+          <h2 class="text-3xl text-white font-semibold">
+            Welcome to the AI Blog Generators
+          </h2>
+          <p class="text-xl text-slate-600 my-4">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
+            magni amet animi ducimus consectetur mollitia cupiditate maxime
+            quisquam, vero architecto, consequatur, alias exercitationem
+            delectus.
+          </p>
+        </div>
+        <!-- form YouTube Link -->
+        <br />
+        <div>
+          <h2 class="text-xl font-semibold text-slate-200 mb-4">
+            Enter YouTube Video Link :
+          </h2>
+          <div class="flex space-x-4 flex-wrap">
+            <input
+              type="url"
+              id="youtubelink"
+              placeholder="Paste YouTube Link here..."
+              class="flex-grow p-3 border border-red-700 rounded-l-lg"
+            />
+            <button
+              class="bg-red-500 px-4 py-2 rounded-r-lg text-white text-xl border border-red-700 hover:bg-red-700"
+              id="generateBtn"
+            >
+              Generate
+            </button>
+          </div>
+          <!-- section for loading -->
+
+          <div style="display: none" class="load" id="loading-circle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <!-- generated Blog display section -->
+          <section class="mt-10 flex-grow">
+            <h2 class="text-xl font-semibold text-white mb-4">
+              Generated Blog Article :
+            </h2>
+            <div id="blogContent" class="mt-2 space-y-4 text-slate-200"></div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer class="text-center p-4 text-slate-500 mt-6">
+      Power by <a href="#">GainCode ALi</a>
+    </footer>
+  </body>
+</html>

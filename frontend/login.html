@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOGIN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link
+      src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    /> -->
+  </head>
+  <body class="flex flex-col min-h-screen bg-slate-200 font-sans antialised">
+    <!-- Navbar -->
+    <nav class="bg-red-600 p-4 text-white flex justify-between items-center">
+      <div>
+        <h1 class="text-4xl font-bold">AI Blog Generator</h1>
+      </div>
+      <div>
+        <a href="#" class="text-white hover:underline text-2xl">Logout</a>
+      </div>
+    </nav>
+    <!-- Main content -->
+
+    <div class="flex flex-col items-center justify-center h-screen">
+      <div
+        style="
+          box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+            0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        "
+        class="bg-white rounded-lg shadow-xl overflow-hidden max-w-xl w-full"
+      >
+        <div class="p-8">
+          <h2 class="text-center text-3xl font-extrabold text-slate-500">
+            Welcome Back
+          </h2>
+          <p class="mt-4 text-center text-gray-400">Sign in to continue</p>
+          <form method="POST" action="#" class="mt-8 space-y-6">
+            <div class="rounded-md shadow-sm">
+              <div>
+                <label class="sr-only" for="email">Email address</label>
+                <input
+                  placeholder="Email address"
+                  class="appearance-none relative block w-full px-3 py-3 border border-gray-700 bg-red-700 text-white rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                  required=""
+                  autocomplete="email"
+                  type="email"
+                  name="email"
+                  id="email"
+                />
+              </div>
+              <div class="mt-4">
+                <label class="sr-only" for="password">Password</label>
+                <input
+                  placeholder="Password"
+                  class="appearance-none relative block w-full px-3 py-3 border border-gray-700 bg-red-700 text-white rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                  required=""
+                  autocomplete="current-password"
+                  type="password"
+                  name="password"
+                  id="password"
+                />
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between mt-4">
+              <div class="flex items-center">
+                <input
+                  class="h-4 w-4 text-indigo-500 focus:ring-indigo-400 border-gray-600 rounded"
+                  type="checkbox"
+                  name="remember-me"
+                  id="remember-me"
+                />
+                <label
+                  class="ml-2 block text-sm text-gray-400"
+                  for="remember-me"
+                  >Remember me</label
+                >
+              </div>
+
+              <div class="text-sm">
+                <a class="font-medium text-red-500 hover:text-red-400" href="#">
+                  Forgot your password?
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <button
+                class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-gray-900 bg-red-500 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                type="submit"
+              >
+                Sign In
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="px-8 py-4 bg-red-700 text-center">
+          <span class="text-gray-400">Don't have an account?</span>
+          <a class="font-medium text-red-200 hover:text-red-300" href="#"
+            >Sign up</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
